@@ -6,5 +6,5 @@
 
 ## Examples : 
 - On typing **28/03/23** => we get the all rows that match date.
-- **27/03/2023**
-- **26/03/2023**
+- **27/03/23**
+- **26/03/23**
