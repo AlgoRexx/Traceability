@@ -1,9 +1,8 @@
 # Engine no.  Query
 
-- First, open the file named : **Trace8.py**
-- In line 90, the path to the folder in program (Trace8.py) should be replaced with the path to Engine_no_query folder where it is located in the system.
-- After changing the path, then open a terminal pointing the same folder and run the command : uvicorn Trace8:app --reload
-- which will begain the executing
+- Open the "**Trace8.py**" file.
+- Locate line 90 and update the folder path to the absolute path of the "Engine_no_query" folder on your system.
+- After adjusting the path, open a terminal in the same directory and execute the following command to launch the application using UVicorn : uvicorn Trace8:app --reload
 
 ## Examples : 
 - On typing **123456** => we get the all rows that match engine number.
