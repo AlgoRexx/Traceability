@@ -1,0 +1,4 @@
+Command to Run in terminal:
+
+
+	" uvicorn Trace8:app --reload "
