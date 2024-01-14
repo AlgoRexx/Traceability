@@ -113,15 +113,16 @@ async def read_item(request: Request, barcode: str = Form(...)):
 
         if not df_row.empty:
             df_row_html = df_row.to_html(index=False, escape=False, classes="styled-table")
-            df_row_html = df_row_html.replace('<td>OK</td>', '<td style="background-color: green;">OK</td>')
+            df_row_html = df_row_html.replace('<td>OK</td>', '<td style="background-color: green; color: white;">OK</td>')
             df_row_html = df_row_html.replace('<td>None</td>', '<td style="background-color: yellow;">None</td>')
-            df_row_html = df_row_html.replace('<td>BB</td>', '<td style="background-color: red;">BB</td>')
+            df_row_html = df_row_html.replace('<td>BB</td>', '<td style="background-color: red; color: white;">BB</td>')
 
             result_data = df_row_html
             df_row['Reception date/time'] = pd.to_datetime(df_row['Reception date/time'], format='%M:%S.%f')
 
-            # Plotting
-            plt.plot(df_row['Reception date/time'], df_row['Torque'])  # Replace 'SomeColumn' with the column you want to plot
+            # Plotting with a larger figure size
+            plt.figure(figsize=(12, 6))  # Adjust the size as needed
+            plt.plot(df_row['Reception date/time'], df_row['Torque'])
             plt.title('Your Plot Title')
             plt.xlabel('Date & Time')
             plt.ylabel('Torque')

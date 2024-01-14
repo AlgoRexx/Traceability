@@ -87,7 +87,7 @@ def read_root(request: Request):
 
 @app.post("/result/")
 async def read_item(request: Request, barcode: str = Form(...)):
-    current_folder = '/Users/anand/Desktop/ai/grad/Engine_no_query'          # change path here
+    current_folder = '/Users/anand/Desktop/ai/grad/Engine_no_query'
     csv_files = [join(current_folder, f) for f in listdir(current_folder) if
                  isfile(join(current_folder, f)) and f.endswith('.csv')]
 
