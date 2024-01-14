@@ -1,4 +1,0 @@
-Command to Run in terminal:
-
-
-	" uvicorn Trace9:app --reload "
